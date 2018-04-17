@@ -1,4 +1,4 @@
-Given(/^a new '(.*)' browser$/) do |browserName| 
+Given(/^a new '(.*)' browser$/) do |browserName|
 	begin
 		case browserName
 			when "firefox"
@@ -29,12 +29,9 @@ end
 Given(/^I navigate to register$/) do
 	begin
         $browser.navigate.to "https://www.phptravels.net/register"
-		@registerPage = RegisterPage.new $browser
+				@registerPage = RegisterPage.new $browser
 		fail "We are not in Register Page!" unless @registerPage.loaded?
-		@registerPage.click_submit
 	rescue => e
 		fail "Error opening page. Error : #{e}"
 	end
 end
-
-  
