@@ -3,7 +3,8 @@ Feature: register
 	Background:
 		Given a new 'chrome' browser
 	
-	# POSITIVE
+	# POSITIVEEE
+
 
 	@test_case 
 	Scenario: Verify register 
