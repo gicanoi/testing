@@ -35,3 +35,16 @@ Given(/^I navigate to register$/) do
 		fail "Error opening page. Error : #{e}"
 	end
 end
+
+Given(/^I navigate to hotels$/) do
+	begin
+        $browser.navigate.to "https://www.phptravels.net/hotels"
+				@hotelsPage = HotelsPage.new $browser
+		fail "We are not in Hotels Page!" unless @hotelsPage.loaded?
+	rescue => e
+		fail "Error opening page. Error : #{e}"
+	end
+end
+
+
+
