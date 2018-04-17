@@ -41,8 +41,8 @@ class RegisterPage
       browser.title.include?('My Account')
     end
 
-    def seeMyName(nom1,nom2)
-      ("Hi, " + nom1 + " " + nom2) == browser.find_element(NAME_FIELD).text()
+    def seeMyName(nom)
+      ("Hi, " + nom) == browser.find_element(NAME_FIELD).text()
     end
 
 end

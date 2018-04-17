@@ -1,7 +1,7 @@
 
-When(/^I fill the form$/) do
+When(/^I fill the form with '(.*)' '(.*)' '(.*)' '(.*)' '(.*)' '(.*)'$/) do |nom1, nom2, cel, mail, pass, conf|
 	begin
-		@registerPage.fill('Juan', 'Perez', '098123456', 'jaaanmurz.perez@ucu.edu.uy', 'Pa$$w0rd', 'Pa$$w0rd')
+		@registerPage.fill(nom1, nom2, cel, mail, pass, conf)
 	rescue => e
 		fail "Error inserting values. Error: #{e}"
 	end
@@ -24,9 +24,9 @@ When(/^I get redirected to the account page$/) do
 		end
 end
 
-When(/^I see my name$/) do
+When(/^I see my name '(.*)'$/) do |nom|
 		begin
-				@registerPage.seeMyName('Juan', 'Perez')
+				@registerPage.seeMyName(nom)
 		rescue => e
 				fail "Error clicking submit button. Error: #{e}"
 		end
