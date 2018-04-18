@@ -1,16 +1,15 @@
 
 class RegisterPage
 
-    SUBMIT_BUTTON = { xpath: '//*[@id="headersignupform"]/div[9]/button' }
-
-    NAME_INPUT={xpath: '//*[@id="headersignupform"]/div[3]/input'}
-    LASTNAME_INPUT={xpath: '//*[@id="headersignupform"]/div[4]/input'}
+    SUBMIT_BUTTON = { css: '.signupbtn' }
+    NAME_INPUT={css: 'input[name="firstname"]'}
+    LASTNAME_INPUT={css: 'input[name="lastname"]'}
     #LASTNAME_INPUT={xpath: '//*[@id="headersignupform"]/div[4]/input'}
     #input[name="phone"]
     MOBILE_INPUT={css: 'input[name="phone"]'}
-    EMAIL_INPUT={xpath: '//*[@id="headersignupform"]/div[6]/input'}
-    PASSWORD_INPUT={xpath: '//*[@id="headersignupform"]/div[7]/input'}
-    CONFIRM_PASSWORD_INPUT={xpath: '//*[@id="headersignupform"]/div[8]/input'}
+    EMAIL_INPUT={css: 'input[name="email"]'}
+    PASSWORD_INPUT={css: 'input[name="password"]'}
+    CONFIRM_PASSWORD_INPUT={css: 'input[name="confirmpassword"]'}
 
     NAME_FIELD= {css: 'h3[class="RTL"]'}
 
