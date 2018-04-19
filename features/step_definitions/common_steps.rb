@@ -36,6 +36,15 @@ Given(/^I navigate to register$/) do
 	end
 end
 
+Given(/^I navigate to contact us page$/) do
+	begin
+        $browser.navigate.to "https://www.phptravels.net/contact-us"
+				@contactUsPage = ContactUsPage.new $browser
+		fail "We are not in Contact Us Page!" unless @contactUsPage.loadedContactUs?
+	rescue => e
+		fail "Error opening page. Error : #{e}"
+	end
+end
 
 
 Given(/^I navigate to hotels$/) do

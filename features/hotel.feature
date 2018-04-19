@@ -5,7 +5,7 @@ Feature: hotel
 
 	# POSITIVE
 
-	@test_case
+	@ignore
 	Scenario: Verify hotel reservation
     Given I navigate to hotels
     When I filter the search by airport transport
