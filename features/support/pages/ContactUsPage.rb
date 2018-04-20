@@ -7,7 +7,6 @@ class ContactUsPage
     SUBJECT_INPUT={css: 'input[name="contact_subject"]'}
     MESSAGE_INPUT={css: '[name="contact_message"]'}
     SUCCESS_MESSAGE= {css: '.alert-success'}
-    CONTACT_US_BUTTON= {css: '[href="https://www.phptravels.net/contact-us"]'}
 
     attr_reader :browser
 
@@ -15,12 +14,9 @@ class ContactUsPage
         @browser = browser
     end
 
-    def click_submit
-        browser.find_element(SUBMIT_BUTTON).click
-    end
 
-    def click_contact_us
-        browser.find_element(CONTACT_US_BUTTON).click
+    def loaded?
+        browser.title.include?('Contact')
     end
 
     def fill(nom, mail, subject, msg)
@@ -30,8 +26,8 @@ class ContactUsPage
         browser.find_element(MESSAGE_INPUT).send_keys(msg)
     end
 
-    def loadedContactUs?
-        browser.title.include?('Contact')
+    def click_submit
+        browser.find_element(SUBMIT_BUTTON).click
     end
 
     def seeMessage(msg)

@@ -1,14 +1,4 @@
-
-When(/^I get redirected to the contact us page$/) do
-		begin
-				sleep(2)
-				fail "We are not in Contact Us Page!" unless @contactUsPage.loadedContactUs?
-		rescue => e
-				fail "Error opening page. Error : #{e}"
-		end
-end
-
-When(/^I fill the form with '(.*)' '(.*)' '(.*)' '(.*)'$/) do |nom, mail, subject, msg|
+When(/^I fill the contact form with '(.*)' '(.*)' '(.*)' '(.*)'$/) do |nom, mail, subject, msg|
 	begin
 		@contactUsPage.fill(nom, mail, subject, msg)
 	rescue => e
