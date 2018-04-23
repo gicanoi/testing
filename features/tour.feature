@@ -5,7 +5,7 @@ Feature: tour
 
 	# POSITIVE
 
-	@ignore
+	@test_case
 	Scenario: Verify history tour reservation
 		Given I navigate to the Tours Page
 		Then I select History Tours

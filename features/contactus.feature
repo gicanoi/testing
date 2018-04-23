@@ -5,7 +5,7 @@ Feature: contactus
 
 	# POSITIVE
 
-	@ignore
+	@test_case
 	Scenario: Verify contact us
 		Given I navigate to contact us page
 		When I fill the contact form with 'Juan Perez' 'juan.perez@hotmail.com' 'Contact Subject' 'Quiero contactar a PhpTravels'
