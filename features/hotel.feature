@@ -5,11 +5,11 @@ Feature: hotel
 
 	# POSITIVE
 
-	@ignore
+	@test_case
 	Scenario: Verify hotel reservation
     Given I navigate to hotels
-    When I filter the search by airport transport
+    When I filter the search by 'Airport Transport'
     When I submit the search filters
-  	Then I get results with airport transport amenity
+  	Then I get results with 'Airport Transport' amenity
 
 	# NEGATIVE
