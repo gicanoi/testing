@@ -3,7 +3,7 @@ When(/I insert a valid time range/) do
 	begin
 	#	@page.fill_valid_dates
 	rescue => e
-		fail "Error iserting dates. Error: #{e}"
+		fail "Error inserting dates. Error: #{e}"
 	end
 end
 

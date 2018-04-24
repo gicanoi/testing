@@ -5,7 +5,7 @@ Feature: search_flight
 	
 	# POSITIVE
 
-	@test_case 
+	@ignore 
 	Scenario: Verify simple search
 		Given I navigate to homepage
 		When I insert a valid time range 
